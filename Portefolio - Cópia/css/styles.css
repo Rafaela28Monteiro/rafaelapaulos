@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #0C5455;
+    --background-color: #f5f5f5;
+}
+
+@media(max-width: 992px){
+    :root{
+        font-size: 15px;}
+}  
+
+@media(max-width: 576px){
+    .about .about-text{
+        font-size: 15px;}
+}  
+
+@font-face {
+    font-family: 'Neue Montreal';
+    src: url('font/PPNeueMontreal-Book.woff');
+    font-display: swap;
+}
+
+body{
+    font-family: 'Neue Montreal';
+    color: var(--primary-color);
+    background-color: var(--background-color);
+}
+
+.container-fluid{
+    padding: 0 1.5rem;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* HEADER */
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 5rem;
+    padding: 0 1.5rem;
+    border-bottom: 1px solid var(--primary-color);
+
+    background-color: var(--background-color);
+
+    font-size: 1.5rem;
+    text-transform: uppercase;
+
+    z-index: 100;
+}
+
+header a{
+    transition: opacity .3s ease-in-out;
+}
+
+header a:hover{
+    opacity: .5;
+}
+
+header nav ul{
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li{
+    margin-left: 1.5rem;
+}
+
+
+/* MAIN */
+main{
+    margin-top: 5rem;
+    min-height: calc(100vh - 8rem);
+    min-height: calc((var(--vh, 1vh) * 100) - 8rem);
+    
+}
+
+
+/* HOME */
+
+.home .home-image{
+    height: calc(100vh - 8rem);
+    height:calc((var(--vh, 1vh) * 100) - 8rem);
+    background-image: url('../img/home.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* WORK */
+.work main{
+    padding: 1.5rem 0 3rem;
+}
+
+.work .card{
+    margin-bottom: 1.5rem;
+}
+.work .card-image{
+    background-color: #0C5455;
+    padding-bottom: 60%;
+    margin-bottom: 1rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.work .card-image-top{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: opacity .0s;
+}    
+
+
+.work .card-title{
+    font-size: 1.25rem;
+    margin-bottom: .2rem;
+}
+
+.work .card-description{
+    font-size: .8rem;
+    text-transform: uppercase;
+}
+
+/* ABOUT */
+
+.about section{
+    padding: 1.5rem 0;
+}
+
+.about section + section {
+    border-top: 1px solid var(--primary-color);
+}
+
+.about .about-text{
+    font-size: 3.5rem;
+}
+
+@media(max-width: 576px){
+    .about .about-text{
+        font-size: 2rem;}
+}  
+
+.about .section-title{
+    position: sticky;
+    top: 6.5rem;
+    font-size: 1.5rem;
+}
+
+.about .section-content ul{
+    list-style: none;
+}
+
+.about iframe{
+    width: 100%;
+    height: 20rem;
+    filter: grayscale(1);
+}
+
+.about .section-content{
+    padding: 3rem 1 0;
+}
+
+
+/* PROJECT */
+.project .project-image{
+    position: sticky;
+    top: 5rem;
+    height: calc(100vh - 8rem);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    z-index: -1;
+}
+
+.project .project-content{
+    padding: 1.5rem 0 4.5rem;
+    background-color: var(--background-color);
+    border-top: 1px solid var(--primary-color);
+}
+
+.project .project-content section{
+    padding: 1.5rem 0;
+}
+
+.project .project-content section + section{
+    border-top: 1px solid var(--primary-color);
+}
+
+.project .project-gallery img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project .project-gallery img + img{
+    margin-top: 1.5rem;
+}
+
+
+/* FOOTER */
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+    padding: 0 1.5rem;
+    border-top: 1px solid var(--primary-color);
+    text-transform: uppercase;
+    background-color: #f5f5f5;
+}
+
+footer ul{
+    display: flex;
+    list-style: none;
+}
+
+footer ul li{
+    margin-left: 1rem;
+}
